@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "647100628867",
+    "firebase_url": "https://walletguard-5f2dd.firebaseio.com",
+    "project_id": "walletguard-5f2dd",
+    "storage_bucket": "walletguard-5f2dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647100628867:android:e7ebdab702897218",
+        "android_client_info": {
+          "package_name": "com.app.walletguard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647100628867-4m1kf45d017isut0kppn6e4jr49mqcb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAImBdNeKJbhThgcNO-1jYZX4MMFcIcxTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
