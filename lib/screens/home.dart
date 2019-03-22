@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../presentation/font_awesome_icons.dart';
+import '../widgets/font_awesome_icons.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Home extends StatelessWidget {
@@ -18,14 +18,14 @@ class Home extends StatelessWidget {
           SizedBox(
             width: 200,
             child: RaisedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, "/login"),
               child: const Text('Login'),
             ),
           ),
           SizedBox(
             width: 200,
             child: RaisedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, "/signup"),
               child: const Text('Sign Up'),
             ),
           ),
