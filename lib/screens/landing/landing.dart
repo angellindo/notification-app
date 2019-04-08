@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
-import '../widgets/font_awesome_icons.dart';
-// import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:redux/redux.dart';
+import 'package:walletguard/redux/store/app_state.dart';
+import 'package:walletguard/screens/landing/model/landing_model.dart';
+import 'package:walletguard/screens/landing/widget/google_auth_button.dart';
 
-class Home extends StatelessWidget {
+class Landing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return StoreConnector<AppState, LandingViewModel>(
+        converter: (Store<AppState> store) => LandingViewModel.create(store),
+        builder: (BuildContext context, LandingViewModel vm) =>
+            this.widget(context, vm));
+  }
+
+  widget(BuildContext context, LandingViewModel vm) {
     return Scaffold(
         body: Center(
       child: Column(
@@ -31,19 +41,7 @@ class Home extends StatelessWidget {
           ),
           SizedBox(
             width: 200,
-            child: RaisedButton(
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
-                    child: Icon(FontAwesome.google),
-                  ),
-                  Text('Google')
-                ],
-              ),
-            ),
+            child: GoogleAuthButton(vm.currentUser, vm.onLogin),
           ),
         ],
       ),
