@@ -1,7 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
-class LogIn {}
+class Status {}
+
+class LogIn {
+  final NavigatorState navigator;
+  LogIn(this.navigator);
+}
 
 class LogInSuccessful {
   final FirebaseUser user;
@@ -25,7 +31,10 @@ class LogInFail {
   }
 }
 
-class LogOut {}
+class LogOut {
+  final NavigatorState navigator;
+  LogOut(this.navigator);
+}
 
 class LogOutFail {
   final dynamic error;

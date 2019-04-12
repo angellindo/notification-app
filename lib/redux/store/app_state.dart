@@ -14,7 +14,7 @@ class AppState {
         currentUser = null;
 
   AppState copyWith({bool isLoading}) {
-    return new AppState(
+    return AppState(
       isLoading: isLoading ?? this.isLoading,
       currentUser: currentUser ?? this.currentUser,
     );

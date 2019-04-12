@@ -1,15 +1,16 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:walletguard/redux/store/app_state.dart';
-
+import 'package:redux/redux.dart';
+import 'package:walletguard/screens/landing/landing.dart';
 import './screens/login/login.dart';
 import './screens/sign_up.dart';
-import './screens/landing/landing.dart';
+import './screens/loading.dart';
+import './screens/dashboard/dashboard.dart';
 
-Map<String, WidgetBuilder> getRoutes(context, store) {
+Map<String, WidgetBuilder> getRoutes(Store store) {
   return {
-    '/': (BuildContext context) => StoreBuilder<AppState>(
-        builder: (context, store) => Landing()
-    )
+    '/landing': (BuildContext context) => Landing(),
+    '/login': (BuildContext context) => Login(),
+    '/signup': (BuildContext context) => SignUp(),
+    '/dashboard': (BuildContext context) => Dashboard()
   };
 }

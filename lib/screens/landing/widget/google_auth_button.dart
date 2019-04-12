@@ -12,7 +12,7 @@ class GoogleAuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () {
-        this.onLogin();
+        this.onLogin(Navigator.of(context));
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
