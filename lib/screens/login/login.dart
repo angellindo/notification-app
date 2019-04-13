@@ -1,14 +1,39 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
-  final Widget child;
-
-  Login({Key key, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: child,
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(
+              width: 200,
+              child: TextField(
+                onChanged: (text) => print(text),
+                decoration: InputDecoration(
+                    hintText: 'Your email address'),
+              ),
+            ),
+            SizedBox(
+              width: 200,
+              child: TextField(
+                onChanged: (text) => print(text),
+                decoration: InputDecoration(
+                    hintText: 'Your password'),
+              ),
+            ),
+            SizedBox(width: 200,
+            child: RaisedButton(
+              onPressed: () => null,
+              child: Text("Log In"),
+            )
+            )
+          ],
+        ),
+      ),
     );
   }
 }

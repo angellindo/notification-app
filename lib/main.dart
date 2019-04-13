@@ -6,7 +6,7 @@ import 'package:walletguard/redux/middleware/auth_middleware.dart';
 import 'package:walletguard/redux/store/app_state.dart';
 import 'package:walletguard/screens/dashboard/dashboard.dart';
 import 'package:walletguard/screens/landing/landing.dart';
-import 'package:walletguard/theme.dart';
+import 'package:walletguard/theme/theme.dart';
 import 'redux/reducers/app_state_reducer.dart';
 import './routes.dart';
 
@@ -26,7 +26,7 @@ void main() async {
 }
 
 class MainApp extends StatelessWidget {
-  bool loggedIn;
+  final bool loggedIn;
 
   MainApp(this.loggedIn);
 
