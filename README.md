@@ -1,4 +1,4 @@
-# walletguard
+# Notification App
 
 A new Flutter project.
 
